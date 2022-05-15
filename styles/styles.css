@@ -10,8 +10,7 @@
   background-position: center;
 }
 
-.navbar .container-fluid .navbar-brand img {
-  width: 150px;
+.navbar .container-fluid .navbar-brand {
   margin-left: 30px;
 }
 
