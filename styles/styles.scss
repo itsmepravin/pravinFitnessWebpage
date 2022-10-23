@@ -1,44 +1,90 @@
 * {
   padding: 0;
   margin: 0;
+  box-sizing: border-box;
+  overflow: visible;
 }
+
+$blue: #013f7e;
+$white: #ffffff;
+$dark-grey: #191d2b;
+$color-fitness-club: var(--bs-indigo);
+$color-light-fitness-club: #7e28ff;
+$box-shadow-lg: 0 1rem 3rem rgba($white, 0.175);
+
+:root {
+  --color-primary: #191d2b;
+  --color-secondary: #27ae60;
+  --color-white: #ffffff;
+  --color-black: #000;
+  --color-grey0: #f8f8f8;
+  --color-grey-1: #dbe1e8;
+  --color-grey-2: #b2becd;
+  --color-grey-3: #6c7983;
+  --color-grey-4: #454e56;
+  --color-grey-5: #2a2e35;
+  --color-grey-6: #12181b;
+  --color-grey-7: #efefef;
+  --png-filter: opacity(0.5) drop-shadow(0 0 0 #6600ff);
+  --color-pawnda: #61dafb;
+  --color-nextjs-ecomm: rgba(255, 255, 255, 0.4);
+  --color-tech-community: #27ae60;
+  --color-fitness: #7952b3;
+  --color-constitution: #f7df1e;
+  --color-srota: greenyellow;
+  --color-weekend-watch: #b41717;
+  --br-sm-2: 1rem;
+  --backdropFilter: blur(0.5rem);
+  --easeInOut: all 0.4s ease-in-out;
+  --box-shadow-1: 0 3px 15px rgba(0, 0, 0, 0.3);
+}
+
 #header {
-  background-image: url(../img/banner1.jpg);
-  height: 80vh;
-  background-size: cover;
-  background-position: center;
+  background-image: url(../img/mobileHeroImage.jpg);
+  height: 40vh;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+
+section {
+  background-color: var(--color-grey-6);
+  color: var(--color-grey-2);
 }
 
 .navbar {
   .container-fluid {
     .navbar-brand {
-      margin-left: 30px;
-    }
-
-    .fa-bars {
-      color: #fff;
-      font-size: 26px;
-    }
-
-    .navbar-nav {
-      li {
-        a {
-          float: right;
-          color: #fff !important;
-        }
-      }
+      width: 170px;
+      height: 50px;
     }
 
     .navbar-toggler {
-      border: none !important;
-      outline: none !important;
+      border: none;
+      outline: none;
     }
 
-    .navbar-nav {
-      li {
-        a {
-          float: right;
-          color: #fff !important;
+    .fa-bars {
+      color: $color-fitness-club;
+      font-size: 1.75rem;
+    }
+
+    #navbarNav {
+      .navbar-nav {
+        .nav-item {
+          .nav-link {
+            float: right;
+            text-align: center;
+            width: 100%;
+            color: var(--color-grey-1) !important;
+            background-color: $color-fitness-club;
+
+            &:hover {
+              background-color: $color-light-fitness-club !important;
+            }
+          }
+          .active {
+            color: var(--color-grey-1) !important;
+          }
         }
       }
     }
@@ -48,45 +94,57 @@
 // Welcome Text
 
 #welcome {
+  padding: 1rem;
   .welcome {
-    padding: 50px 100px;
-    margin-top: -140px;
-    background-color: #fff;
-    box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 1rem 1rem 1rem;
+    margin-top: -6rem;
+    color: var(--color-grey-1);
+    background-color: #2a354f;
 
-    h1 {
-      color: #333;
+    h5 {
       font-weight: 700;
     }
 
-    .btn {
-      &:hover {
-        box-shadow: none;
-      }
+    .fa-quote-left {
+      top: 2%;
+      left: 45%;
+    }
+
+    hr {
+      color: $color-fitness-club;
+      background-color: $color-fitness-club;
+      height: 0.25rem;
+      margin: 1rem 3rem !important;
+      text-align: center;
     }
 
     .home-btn {
-      margin-top: 10px;
-      padding: 10px 30px;
-      border-radius: 30px;
-      color: #fff;
-      background-color: #013f7e;
+      padding: 0.5rem 2rem;
+      border-radius: 2rem;
+      font-weight: 700;
+      color: var(--color-grey-1);
+      background-color: $color-fitness-club;
+
+      &:hover {
+        color: $color-fitness-club;
+        background-color: $white;
+      }
     }
   }
 }
 
 // About Us
 #about {
-  padding-top: 100px;
-  padding-bottom: 100px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 
   .container {
     .row {
       .col-md-6 {
-        padding: 20px 10px;
+        padding: 1rem 1rem;
 
-        h3 {
-          margin: 20px auto;
+        h2 {
+          margin: 2.25rem auto;
         }
       }
     }
@@ -95,22 +153,26 @@
 
 // Services
 #services {
-  background-color: #efefef;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  background-color: var(--color-grey-7);
   .container {
     .row {
       .col-md-4 {
         padding: 20px;
         h4 {
           padding: 5px;
+          color: var(--color-fitness);
         }
         img {
           width: 50px;
+          filter: var(--png-filter);
+        }
+        .fa-bell {
+          filter: var(--png-filter);
         }
         p {
           padding: 5px;
           text-align: justify;
+          color: #2a354f;
         }
       }
     }
@@ -119,45 +181,26 @@
 
 // Features
 #features {
-  padding-top: 100px;
-  padding-bottom: 100px;
-  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
-    url(../img/feature-background.jpg);
-  background-position: center;
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+    url(https://i.kym-cdn.com/photos/images/newsfeed/001/370/937/834.png);
   background-size: cover;
-  background-attachment: fixed;
-  color: #fff;
+  color: $white;
+
   .container {
     .row {
-      .col-md-6 {
-        padding: 20px;
-        .feature-box {
-          height: 120px;
-          .feature-left {
-            height: 120px;
-            width: 20%;
-            float: left;
-            .fa {
-              padding-top: 13px;
-              font-size: 50px;
-            }
-          }
+      display: flex;
+      flex-wrap: nowrap;
 
-          .feature-right {
-            height: 120px;
-            width: 80%;
-            float: left;
-            h4 {
-              padding-top: 10px;
-              padding-left: 15px;
-              text-align: left;
-            }
-            p {
-              padding-left: 15px;
-              text-align: left;
-            }
-          }
-        }
+      .fa,
+      .fas {
+        width: 10%;
+        font-size: 2.4rem;
+        color: $color-light-fitness-club;
+        margin-top: 1.5rem;
+      }
+
+      div {
+        padding: 0 2.5rem 0 2.5rem;
       }
     }
   }
@@ -165,12 +208,9 @@
 
 // Testimonials
 #testimonials {
-  padding-top: 100px;
-  padding-bottom: 100px;
   .container {
     h1 {
-      margin-bottom: 20px;
-      color: #013f7e;
+      color: $blue;
     }
     p {
       padding-bottom: 20px;
@@ -186,14 +226,14 @@
           font-size: 16px;
           padding: 10px 10px 10px 30px;
           border-radius: 10px;
-          box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.2);
+          box-shadow: $box-shadow-lg;
 
           .fa-twitter {
-            color: #013f7e;
+            color: $blue;
           }
 
           span {
-            color: #013f7e;
+            color: $blue;
             font-weight: 600;
             font-size: 18px;
           }
@@ -218,11 +258,10 @@
   .container {
     .subscribe {
       padding: 50px 20px;
-      background-color: #013f7e;
-      position: relative;
+      background-color: $blue;
       box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.2);
-      margin-bottom: -160px;
-      h3,
+      margin-bottom: -280px;
+      h2,
       p {
         color: #fff;
       }
@@ -266,49 +305,15 @@
 
 // Footer
 #footer {
-  margin-top: 80px;
-  padding: 100px;
+  margin-top: 10rem;
+  padding-top: 10rem;
   background-color: #efefef;
-  color: #013f7e;
-  .container {
-    hr {
-      margin-top: 10px;
-    }
-    .copyright {
-      margin-bottom: -80px;
-      text-align: center;
-      font-size: 15px;
-      .fa-heart {
-        color: red;
-        font-size: 17px;
-      }
-    }
-    .row {
-      .col-md-3 {
-        h1 {
-          font-size: 25px;
-          text-align: left;
-          margin-top: 25px;
-          margin-bottom: 25px;
-        }
-        p {
-          text-align: left;
-        }
-        .footer-logo {
-          width: 150px;
-          margin-top: 25px;
-          margin-bottom: 15px;
-        }
-        .fas,
-        .fab {
-          padding-right: 20px;
-          font-size: 20px;
-        }
-        .city {
-          margin-left: 37px;
-        }
-      }
-    }
-  }
+  color: $blue;
 }
+
+.copyright {
+  background-color: #efefef;
+  margin-bottom: -2rem;
+}
+
 @import "./media";

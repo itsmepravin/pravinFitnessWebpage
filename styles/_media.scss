@@ -1,0 +1,79 @@
+@media (min-width: 800px) {
+  #header {
+    background-image: url(../img/laptopHeroImage.jpg);
+    height: 80vh;
+    background-size: cover;
+
+    .navbar-expand-lg {
+      justify-content: space-between;
+      .container-fluid {
+        #navbarNav {
+          .navbar-nav {
+            width: 100%;
+            .nav-item {
+              width: 100%;
+              .nav-link {
+                background-color: transparent;
+                border-bottom: 1px solid white;
+                border-top: 1px solid white;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #welcome {
+    .container {
+      width: 50vw;
+      .welcome {
+        padding: 2rem 1rem 1rem 1rem;
+      }
+    }
+  }
+
+  #features {
+    background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.9)),
+      url(/img/feature-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: $white;
+    line-height: 3rem;
+
+    .container {
+      .row {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        div {
+          padding: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          h4 {
+            font-size: 2rem;
+          }
+          p {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+  }
+
+  #footer {
+    .container {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-around;
+
+      .d-flex {
+        gap: 10rem;
+      }
+    }
+  }
+}
